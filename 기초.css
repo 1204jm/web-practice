@@ -4,14 +4,17 @@
     height: 200px;
     margin:15px;
     border: 1px solid #000000;
-    padding: 10px;
+    padding: 30px;
+    /*padding을 넓히면 공간이 커진다.*/
 }
 .mybox2{
     background:#558;
     width: 300px;
     height: 200px;
     margin-top :70px;
-    margin: 5px;
+    margin: 30px;
+    /*세로방향 margin은 큰걸만 적용된다.*/
+    /*css는 순차지향적*/
     border: 1px solid #000000;
     padding: 10px;
 }
