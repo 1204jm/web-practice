@@ -1,0 +1,17 @@
+.mybox{
+    background:#999;
+    width: 300px;
+    height: 200px;
+    margin:15px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+.mybox2{
+    background:#558;
+    width: 300px;
+    height: 200px;
+    margin-top :70px;
+    margin: 5px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
