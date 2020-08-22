@@ -14,16 +14,32 @@ a{
     background: #eeeeee;
     padding:20px;
 }
+#header h1{
+    text-align: center;
+}
+#header h2{
+    text-align: center;
+}
 #header .logo{
     float:left;
+}
+#content{
+    position: relative;
+    height: auto;
 }
 .clear{
     /*float 뒤는 clear*/
     clear: both;
 }
-#content {
-    padding:20px;
+#maincontent {
+    float: right;
+    width: 200px;
+    padding: 20px;
 }
-#content img{
-    width: 100%; /*가로에 꽉 맞추기*/
+#subcontent{
+    float: left;
+    width: 130px;
+    background-color: blanchedalmond;
+    position:absolute;
+    height: 100%;
 }

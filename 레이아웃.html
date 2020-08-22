@@ -1,7 +1,55 @@
 <html>
     <head>
         <title>레이아웃</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"
         <link rel="stylesheet" href="레이아웃.css">
+        <style type="text/css">
+            body{
+                margin:0; /* 기본여백 지우기*/
+            }
+            a{
+                text-decoration: none; /*언더라인 지우기*/
+            }
+            #wrap{
+                /* wrap안에 한페이지가 다 들어온다. 단 하나이므로 id */
+                background: #919191;
+                width: 420px;
+                margin:0 auto;
+            }
+            #header{
+                background: #eeeeee;
+                padding:20px;
+            }
+            #header h1{
+                text-align: center;
+            }
+            #header h2{
+                text-align: center;
+            }
+            #header .logo{
+                float:left;
+            }
+            #content{
+                position: relative;
+                height: auto;
+            }
+            .clear{
+                /*float 뒤는 clear*/
+                clear: both;
+            }
+            #maincontent {
+                float: right;
+                width: 200px;
+                padding: 20px;
+            }
+            #subcontent{
+                float: left;
+                width: 130px;
+                background-color: blanchedalmond;
+                position:absolute;
+                height: 100%;
+            }
+        </style>
     </head>
     <body>
         <div id="wrap"> 
@@ -12,8 +60,18 @@
                 <div class="clear"></div>
             </div>
             <div id="content">
-                <h3>하늘과 바람과 별과 시</h3>
-                <img src="img/하늘과 바람과 별과 시.jpeg" alt="본문 이미지">
+                <div id="maincontent">
+                    <h3>하늘과 바람과 별과 시</h3>
+                    <img src="img/하늘과 바람과 별과 시.jpeg" alt="본문 이미지">
+                </div>
+                <div id="subcontent">
+                    <ul>
+                        <li><p>서시</p></li>
+                        <li><p>별 헤는밤</p></li>
+                        <li><p>거울</p></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
         
