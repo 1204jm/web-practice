@@ -1,4 +1,29 @@
+body{
+    margin:0; /* 기본여백 지우기*/
+}
+a{
+    text-decoration: none; /*언더라인 지우기*/
+}
 #wrap{
     /* wrap안에 한페이지가 다 들어온다. 단 하나이므로 id */
+    background: #919191;
+    width: 420px;
+    margin:0 auto;
+}
+#header{
     background: #eeeeee;
+    padding:20px;
+}
+#header .logo{
+    float:left;
+}
+.clear{
+    /*float 뒤는 clear*/
+    clear: both;
+}
+#content {
+    padding:20px;
+}
+#content img{
+    width: 100%; /*가로에 꽉 맞추기*/
 }
