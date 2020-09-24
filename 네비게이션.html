@@ -56,8 +56,7 @@
 			    padding: 0;
 			    margin: 0;
 		    }
-            #subcontent > ul > li{ /* 원래는 하위도 다적용되지만 >를 쓰면 그 부분만 적용
-                                      한다는 의미, 저격하고 비슷*/
+            #subcontent > ul > li{ /* 자식선택자 , 한단계 아래만 적용*/
                 background: burlywood;
                 margin: 4px;
                 overflow: hidden;
@@ -90,6 +89,29 @@
             #subcontent > ul > li:hover > ul{
                 display: block;   
             }
+            #nav > li {
+                float: left;
+                background:#ee44dd;
+            }
+            #nav > li:hover {
+                background:#ee2200;
+            }
+            #nav > li > a {
+                display: block;
+                padding: 12px 33px;
+                border-right:1px solid #666;
+            }
+            /*
+            #nav li  a { 하위선택자, 중간에 뭐가 있어도 선택
+                display: block;
+                padding: 12px 33px;
+                border-right:1px solid #666;
+            }
+            */
+            #nav > li > ul {
+               position: absolute;
+            }
+
 
         </style>
     </head>
@@ -99,6 +121,20 @@
                 <span class="logo"><img src="img/윤동주.크기 조절됨.jpeg" alt="윤동주"></span>
                 <h1> 윤동주에 대하여</h1>
                 <h2> 알아보자</h2>
+                <ul id="nav">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li>
+                        <a href="#">3</a>
+                        <ul>
+                                <li><a href="#">3.1</a></li>
+                                <li><a href="#">3.2</a></li>
+                                <li><a href="#">3.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
                 <div class="clear"></div>
             </div>
             <div id="content">
