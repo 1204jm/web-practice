@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>레이아웃</title>
@@ -50,17 +51,46 @@
                 position:absolute;
                 height: 100%;
             }
-            ul, li{
-                list-style-type: none;
-                padding: 0;
-                margin:0;
-            }
-            #subcontent ul li{
+            ul , li {
+			    list-style: none;
+			    padding: 0;
+			    margin: 0;
+		    }
+            #subcontent > ul > li{ /* 원래는 하위도 다적용되지만 >를 쓰면 그 부분만 적용
+                                      한다는 의미, 저격하고 비슷*/
                 background: burlywood;
-                padding: 10px;
                 margin: 4px;
+                overflow: hidden;
             }
-            
+            #subcontent > ul > li > a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+            }
+            #subcontent > ul > .active{
+                background: #99eedd;
+            }
+            #subcontent > ul > li:hover{
+                background: #99eedd;
+            }
+            #subcontent > ul > li > ul > li > a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                
+            }
+            #subcontent > ul > li > ul > li:hover{
+                background: #eeaadd   
+            }
+            #subcontent > ul > li > ul{
+                display: none;   
+            }
+            #subcontent > ul > li:hover > ul{
+                display: block;   
+            }
+
         </style>
     </head>
     <body>
@@ -79,9 +109,16 @@
                 <div id="subcontent">
                     <ul>
                         <li><a href="#">서시</a></li>
-                        <li><a href="#">별 헤는밤</a></li>
+                        <li class="active"><a href="#">별 헤는밤</a></li>
                         <li><a href="#">거울</a></li>
-                        <li><a href="#">기타</a></li>
+                        <li>
+                            <a href="#">기타</a>
+                            <ul>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="clear"></div>
