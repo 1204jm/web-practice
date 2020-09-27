@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>예제용 파일</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type='text/css'>
+		/* 스타일 */
+		body {
+			margin: 0;
+		}
+		a {
+			color:#000000;
+			text-decoration: none;
+		}
+		#wrap {
+			width:960px;
+			background: #eeeeee;
+			position: relative;
+			left:50%;
+			margin-left:-480px;
+			border-left:1px solid #eeeeee;
+			border-right:1px solid #eeeeee;
+		}
+		#header {
+			background: #bbbbbb;
+			padding:20px;
+		}
+		#header .logo {
+			float:left;
+		}
+		#content {
+			padding:20px;
+		}
+		#content img {
+			width:100%;
+		}
+		#footer {
+			background: #000000;
+			height: 50px;
+			text-align: center;
+			padding:20px;
+		}
+		#footer span {
+			color:#ffffff;
+		}
+		.clear {
+			clear:both;
+		}
+        .movietable{
+            width: 100%;
+            border-spacing: 0;
+        }
+        .movietable th{
+            padding-top:10px;
+            padding-bottom:10px;
+            border-bottom:1px solid #999999;
+        }
+        .movietable .poster{
+            width: 8%;
+        }
+        .movietable .director{
+            width: 15%;
+        }
+        .movietable .date{
+            width: 8%;
+        }
+        .movietable td{
+            border-bottom:1px solid #999999;
+            padding-left: 10px;
+        }
+        .movietable .number{
+            text-align: center;
+            padding-left: 0px;
+        }
+        .movietable .odd{
+            background: #fff;
+        }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<span class="logo"><img src="img/logo.png" alt="사이트 로고"></span>
+			<h1>CSS활용강의</h1>
+			<h2>테이블 활용</h2>
+			<div class="clear"></div>
+		</div>
+		<div id="content">
+            <h3>테이블을 만들고 꾸미기</h3>
+            <table class="movietable">
+                <thead>
+                    <tr>
+                        <th class="number">번호</th>
+                        <th class="poster">포스터</th>
+                        <th>영화제목</th>
+                        <th class="director">영화감독</th>
+                        <th class="date">상영연도</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td class="number">1</td>
+                        <td><img src="img/극한직업.jpg"></td>
+                        <td>극한직업</td>
+                        <td>이병헌</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr >
+                        <td class="number">2</td>
+                        <td><img src="img/부산행.png"></td>
+                        <td>부산행</td>
+                        <td>연상호</td>
+                        <td>2018</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="number">3</td>
+                        <td><img src="img/신세계.jpg"></td>
+                        <td>신세계</td>
+                        <td>박훈정</td>
+                        <td>2013</td>
+                    </tr>
+                </tbody>
+            </table>
+		</div>
+		<div id="footer">
+			<span>2015.CSS활용강좌 All rights reserved.</span>
+		</div>
+	</div>
+</body>
+</html>
