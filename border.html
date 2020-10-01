@@ -1,78 +1,132 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>예제용 파일</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<style type='text/css'>
-		/* 스타일 */
-		body {
-			margin:0;
-			padding:0;
-		}
-		h1,h2 {
-			color:#ffffff;
-		}
-		.wrap {
-			width:960px;
-			margin:0 auto;
-			background: #eeeeee;
-		}
-		.header {
-			background: #888888;
-			padding:30px;			
-		}
-		.content {
-			padding:30px;
-		}
-		.footer  {
-			background: #333333;
-			height: 50px;
-			padding:20px;
-			font-size:14px;
-			font-weight:bold;
-			color:#ffffff;
-			text-align: center;
-		}
 
-		.logo {
-			float:left;
-			margin-right:20px;
-		}
-		.banner img {
-			width: 100%;
-		}
-        .bbslist{
+<head>
+    <title>예제용 파일</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type='text/css'>
+        /* 스타일 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2 {
+            color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .wrap {
+            width: 960px;
+            margin: 0 auto;
+            background: #eeeeee;
+        }
+
+        .header {
+            background: #888888;
+            padding: 30px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .footer {
+            background: #333333;
+            height: 50px;
+            padding: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .logo {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .bbslist {
             width: 100%;
             border-spacing: 0;
 
         }
-        .bbslist thead tr th{
+
+        .bbslist thead tr th {
             background: #dddddd;
             border-bottom: 2px solid #bbbbbb;
             padding: 10px;
             border-top: 4px solid #999999;
         }
-        .bbslist tbody tr td{
-            padding:5px;
+
+        .bbslist tbody tr td {
+            padding: 5px;
             border-bottom: 1px solid #999999;
             text-align: center;
+            font-size: 12px;
         }
-        .bbslist .t_subject{
-            width:65%;
+
+        .bbslist .t_subject {
+            width: 65%;
             text-align: left;
         }
-	</style>
+
+        .bbslist .t_subject a:hover {
+            text-decoration: underline;
+        }
+
+        .bbslist .t_comment {
+            font-size: 10px;
+            color: red;
+            margin-left: 2px;
+        }
+        .bbslist .t_author {
+			width: 12%;
+			text-align: left;
+		}
+
+		.bbslist .t_author img {
+			position: absolute;
+            left: 10px;
+            /*left,right,top,bottom을 적용해야 기준이 적용된다
+             기준을 정하지 않으니 그 위치 그대로 
+            */
+		}
+
+		.bbslist .t_author a {
+			position: relative;
+			left:20px;
+		}
+        /*
+        .bbslist .t_author img {
+            position: absolute;
+            left:10 px;
+            html 기준으로 10px이동 위아래는 안정해져서 그 위치 기준
+
+        }
+        */
+    </style>
 </head>
+
 <body>
-	<div class="wrap">
-		<div class="header">
-			<div class="logo"><img src="img/logo.png"></div>
-			<h1>CSS활용강의</h1>
-			<h2>게시판 만들기</h2>
-		</div>
-		<div class="content">
-			<h3>게시판 글쓰기</h3>
-			<table class="bbslist">
+    <div class="wrap">
+        <div class="header">
+            <div class="logo"><img src="img/logo.png"></div>
+            <h1>CSS활용강의</h1>
+            <h2>게시판 만들기</h2>
+        </div>
+        <div class="content">
+            <h3>게시판 글쓰기</h3>
+            <table class="bbslist">
                 <thead>
                     <tr>
                         <th>번호</th>
@@ -85,7 +139,45 @@
                 <tbody>
                     <tr>
                         <td class="t_number">1234</td>
-                        <td class="t_subject"><a href="#" title="게시물">안녕하세요!</a></td>
+                        <td class="t_subject">
+                            <a href="#" title="게시물">안녕하세요!</a>
+                            <span class="t_comment">[6]</span>
+                        </td>
+                        <td class="t_author"><a href="#">박정민</a></td>
+                        <td class="t_date">2020.09.29</td>
+                        <td class="t_read">1</td>
+                    </tr>
+                    <tr>
+                        <td class="t_number">1234</td>
+                        <td class="t_subject">
+                            <a href="#" title="게시물">안녕하세요!</a>
+                            <span class="t_comment">[11]</span>
+                        </td>
+                        <td class="t_author"><a href="#">박정민</a></td>
+                        <td class="t_date">2020.09.29</td>
+                        <td class="t_read">1</td>
+                    </tr>
+                    <tr>
+                        <td class="t_number">1234</td>
+                        <td class="t_subject">
+                            <a href="#" title="게시물">안녕하세요!</a>
+                            <span><img src="img/hasimage.png"></span>
+                            <span class="t_comment">[11]</span>
+
+                        </td>
+                        <td class="t_author">
+                            <span><img src="img/icon1.png"></span>
+                            <a href="#">박정민</a>
+                        </td>
+                        <td class="t_date">2020.09.29</td>
+                        <td class="t_read">1</td>
+                    </tr>
+                    <tr>
+                        <td class="t_number">1234</td>
+                        <td class="t_subject">
+                            <a href="#" title="게시물">안녕하세요!</a>
+                            <span><img src="img/hasimage.png"></span>
+                        </td>
                         <td class="t_author"><a href="#">박정민</a></td>
                         <td class="t_date">2020.09.29</td>
                         <td class="t_read">1</td>
@@ -97,37 +189,17 @@
                         <td class="t_date">2020.09.29</td>
                         <td class="t_read">1</td>
                     </tr>
-                    <tr>
-                        <td class="t_number">1234</td>
-                        <td class="t_subject"><a href="#" title="게시물">안녕하세요!</a></td>
-                        <td class="t_author"><a href="#">박정민</a></td>
-                        <td class="t_date">2020.09.29</td>
-                        <td class="t_read">1</td>
-                    </tr>
-                    <tr>
-                        <td class="t_number">1234</td>
-                        <td class="t_subject"><a href="#" title="게시물">안녕하세요!</a></td>
-                        <td class="t_author"><a href="#">박정민</a></td>
-                        <td class="t_date">2020.09.29</td>
-                        <td class="t_read">1</td>
-                    </tr>
-                    <tr>
-                        <td class="t_number">1234</td>
-                        <td class="t_subject"><a href="#" title="게시물">안녕하세요!</a></td>
-                        <td class="t_author"><a href="#">박정민</a></td>
-                        <td class="t_date">2020.09.29</td>
-                        <td class="t_read">1</td>
-                    </tr>
-                                        
+
                 </tbody>
                 <tfoot>
 
                 </tfoot>
             </table>
-		</div>
-		<div class="footer">
-			<span>2015.CSS활용강좌 All rights reserved.</span>
-		</div>
-	</div>
+        </div>
+        <div class="footer">
+            <span>2015.CSS활용강좌 All rights reserved.</span>
+        </div>
+    </div>
 </body>
+
 </html>
