@@ -21,6 +21,12 @@
             color: black;
         }
 
+        ul, li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
         .wrap {
             width: 960px;
             margin: 0 auto;
@@ -89,23 +95,32 @@
             color: red;
             margin-left: 2px;
         }
-        .bbslist .t_author {
-			width: 12%;
-			text-align: left;
-		}
 
-		.bbslist .t_author img {
-			position: absolute;
-            left: 10px;
+        .bbslist .t_author {
+            position: relative;
+            width: 12%;
+            text-align: left;
+        }
+
+        .bbslist .t_author img {
+            position: absolute;
+            top: 7px;
             /*left,right,top,bottom을 적용해야 기준이 적용된다
              기준을 정하지 않으니 그 위치 그대로 
             */
-		}
+        }
 
-		.bbslist .t_author a {
-			position: relative;
-			left:20px;
-		}
+        .bbslist .t_author a {
+            position: relative;
+            left: 20px;
+        }
+
+        .bbslist .t_author .t_icon_num {
+            position: absolute;
+            top: 0px;
+            left: 60px;
+        }
+
         /*
         .bbslist .t_author img {
             position: absolute;
@@ -114,6 +129,46 @@
 
         }
         */
+        .bbslist tfoot tr td {
+            border-top: 1px solid #bbbbbb;
+            border-bottom: 1px solid #bbbbbb;
+            text-align: right;
+            padding: 10px;
+        }
+        .bbslist tfoot tr a:hover {
+            background: yellow;
+        }
+
+        .bbslist tfoot .t_new_text {
+            background: white;
+            font-size: 12px;
+            border: 1px solid gray;
+            padding: 6px;
+        }
+
+        .bbslist tfoot td span {
+            position: relative;
+            top: 4px;
+        }
+        .page{
+            text-align: center;
+        }
+        .page .page_ul {
+            margin-top: 10px;
+            display: inline-block;
+            
+        }
+        .page .page_ul li {
+            float: left;
+            background: #ffffff;
+            border: 1px solid gray;
+            padding: 10px;
+
+        }
+
+        .clear {
+            clear: both;
+        }
     </style>
 </head>
 
@@ -143,7 +198,11 @@
                             <a href="#" title="게시물">안녕하세요!</a>
                             <span class="t_comment">[6]</span>
                         </td>
-                        <td class="t_author"><a href="#">박정민</a></td>
+                        <td class="t_author">
+                            <span><img src="img/icon1.png"></span>
+                            <a href="#">박정민</a>
+                            <span class="t_icon_num"><img src="img/num1.png"></span>
+                        </td>
                         <td class="t_date">2020.09.29</td>
                         <td class="t_read">1</td>
                     </tr>
@@ -178,23 +237,52 @@
                             <a href="#" title="게시물">안녕하세요!</a>
                             <span><img src="img/hasimage.png"></span>
                         </td>
-                        <td class="t_author"><a href="#">박정민</a></td>
+                        <td class="t_author">
+                            <span><img src="img/icon2.png"></span>
+
+                            <a href="#">박정민</a>
+                        </td>
                         <td class="t_date">2020.09.29</td>
                         <td class="t_read">1</td>
                     </tr>
                     <tr>
                         <td class="t_number">1234</td>
-                        <td class="t_subject"><a href="#" title="게시물">안녕하세요!</a></td>
-                        <td class="t_author"><a href="#">박정민</a></td>
+                        <td class="t_subject">
+                            <a href="#" title="게시물">안녕하세요!</a>
+                        </td>
+                        <td class="t_author">
+                            <span><img src="img/icon3.png"></span>
+
+                            <a href="#">박정민</a>
+                        </td>
                         <td class="t_date">2020.09.29</td>
                         <td class="t_read">1</td>
                     </tr>
 
                 </tbody>
                 <tfoot>
-
+                    <tr>
+                        <td colspan="5">
+                            <a class="t_new_text" href="#">
+                                <span><img src="img/icon4.png"></span>
+                                글쓰기
+                            </a>
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
+            <div class="page">
+                <ul class="page_ul">
+                    <li><a href="#"><</a></li> 
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li> 
+                    <li><a href="#">3</a></li> 
+                    <li><a href="#">4</a></li> 
+                    <li><a href="#">5</a></li> 
+                    <li><a href="#">></a></li>                   
+                </ul>
+            </div>
+            <div class="clear"></div>
         </div>
         <div class="footer">
             <span>2015.CSS활용강좌 All rights reserved.</span>
